@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="Agregar" @click="agregar">
+        <input type="text" placeholder="Nombre" v-model="nuevoNombre">
+        <input type="text" placeholder="Precio" v-model="nuevoPrecio">
+        <input type="text" placeholder="cantidad" v-model="nuevoCantidad" @keyup.enter="agregar"> 
+        <div v-for="n of productos">
+            <p>Nombre: {{n.nombre}} - Precio: {{n.precio}} - Cantidad: {{n.cantidad}}</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

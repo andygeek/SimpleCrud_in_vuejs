@@ -4,17 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-    <div id="app">
-        <input type="button" value="Agregar" @click="agregar">
-        <input type="text" placeholder="Nombre" v-model="nuevoNombre">
-        <input type="text" placeholder="Precio" v-model="nuevoPrecio">
-        <input type="text" placeholder="cantidad" v-model="nuevoCantidad" @keyup.enter="agregar"> 
-        <div v-for="n of productos">
-            <p>Nombre: {{n.nombre}} - Precio: {{n.precio}} - Cantidad: {{n.cantidad}}</p>
+
+    <main class="container">
+
+        <div id="app">
+
+            <input type="button" value="Agregar" @click="agregar">
+            <input type="text" placeholder="Nombre" v-model="nuevoNombre">
+            <input type="text" placeholder="Precio" v-model="nuevoPrecio">
+            <input type="text" placeholder="cantidad" v-model="nuevoCantidad" @keyup.enter="agregar"> 
+            
+            
+            <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="n of productos">
+                    <th scope="row">1</th>
+                    <td>{{n.nombre}}</td>
+                    <td>{{n.precio}}</td>
+                    <td>{{n.cantidad}}</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+
         </div>
-    </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
 </body>

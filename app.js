@@ -1,6 +1,7 @@
 const miapp = new Vue({
     el: '#app',
     data: {
+        hola: 'andy',
         productos: [
             {nombre: 'Colores largos', precio: 12.0, cantidad: 5},
             {nombre: 'Cuaderno cuadriculado', precio: 3.50, cantidad: 2},

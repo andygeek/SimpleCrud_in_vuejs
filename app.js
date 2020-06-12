@@ -14,8 +14,12 @@ const miapp = new Vue({
         agregar: function(){
             this.productos.push({nombre: this.nuevoNombre, precio: this.nuevoPrecio, cantidad: this.nuevoCantidad});
             this.nuevoNombre = '',
-            this.nuevoPrecio = '',
-            this.nuevoCantidad = ''            
+            this.nuevoPrecio = 0,
+            this.nuevoCantidad = 0            
+        },
+        eliminar: function(item){
+            let i = this.productos.indexOf(item)
+            this.productos.splice(i, 1)
         }
     }
 });

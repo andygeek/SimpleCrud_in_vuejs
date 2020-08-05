@@ -6,6 +6,10 @@ This is a simple crud using Vuejs and Bootstrap. For to see the application use 
 
 ![](https://imgur.com/DGDtYyg.gif)
 
+## Starting 🚀
+
+This project do not require preconfiguration for to start.
+
 ------
 
 ⌨️ with ❤️ for [AndyGeek](https://github.com/andygeek) 😊
